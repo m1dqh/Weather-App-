@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/0bdedc8db2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link id="head-icon" rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title id="head-title">Weather App</title>
+</head>
+<body>
+    <div class="card-container flex center">
+        <div class="card radius shadow padx-10">
+            <header class="search flex center my-40 radius" style="--radius: 3px" data-type="flex-start">
+                <input class="search-bar padx-20" type="text" placeholder="Enter a City">
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </header>
+            <section class="card-info">
+                <ul class="container">
+                    <li class="country text-center fs-16"></li>
+                    <li class="weather flex center fs-14" data-type="column">
+                            <img class="weather-icon " src="" alt="">
+                        <p class="weather-text"></p>
+                    </li>
+                <ol class="extra-info flex space-evenly my-40 radius shadow" style="--shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                    <li class="flex center fs-14">
+                        <i class="fa-solid fa-wind"></i>
+                        <p class="wind mxstart-10"></p>
+                    </li>
+                    <li class="flex center fs-14">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p class="humidity mxstart-10"></p>
+                    </li>
+                    <li class="flex center fs-14">
+                        <i class=" fa-solid fa-temperature-empty"></i>
+                        <p class="temperature mxstart-10"></p>
+                    </li>
+                </ol>
+                </ul>
+            </section>
+        </div>
+        <div class="lang">
+            <small>Lang</small>
+            <select class="lang-menu" name="">
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+            </select>
+        </div>
+    </div>
+    <script src="app.js" charset="utf-8" defer></script>
+</body>
+</html>
