@@ -156,6 +156,17 @@ body {
     text-transform: capitalize;
 }
 
+.container {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 .weather-icon {
     --bg: hsl(49, 25%, 75%);
     background-color: var(--bg);

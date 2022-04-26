@@ -1,4 +1,4 @@
-let container = document.querySelector('.card-info');
+const container = document.querySelector('.container');
 const searchBar = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.search-btn');
 const langES = document.getElementById('lang-es');
@@ -28,7 +28,11 @@ navigator.geolocation.getCurrentPosition(success => {
 function fetchData(api) {
     fetch(api)
         .then(res => res.json())
-        .then(data => modifyData(data));
+        .then(data => {
+            modifyData(data);
+            container.classList.add('visible');
+        });
+
 }
 
 function modifyData(data) {
@@ -51,7 +55,7 @@ function modifyData(data) {
 // TODO: Add History.
 // TODO: Add Translation to Spanish
 
-langMenu.value = localStorage.lang;
+langMenu.value = localStorage.lang || 'en';
 
 function getSelectedValue() {
 
